@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+#load-btn {
+  font-size: 18px;
+  font-family: cursive;
+  text-transform: uppercase;
+  border: 2px solid #333;
+  border-radius: 40px;
+  background: none;
+  padding: 10px 50px;
+  transition: 0.8s;
+  cursor: pointer;
+  margin-top: 30px;
+}
+#load-btn:hover {
+  transition: 0.8s;
+  background-color: #333;
+  color: white;
+}
+.current-status {
+  font-size: 18px;
+  font-family: cursive;
+  margin: 30px;
+  box-sizing: border-box;
+}
+.pizza-container {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 1s;
+}
+
+.active {
+  opacity: 1;
+  transition: 1s;
+}
+.pizza {
+  width: 450px;
+  position: relative;
+  background: url(../src/pizza.jpg) center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.pizza:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.triangle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 50%;
+  transform-origin: center bottom;
+  border-bottom: 2px solid #fff;
+}
+
+.circle {
+  height: 100%;
+  width: 100%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  transform-origin: center bottom;
+  transform: rotate(123deg);
+}
+.status {
+  font-size: 20px;
+  font-family: cursive;
+  margin-top: 30px;
+}
